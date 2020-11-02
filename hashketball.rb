@@ -188,16 +188,16 @@ end
 
 def big_shoe_rebounds
   biggest = 0 
-  name = ""
+  rebound = 0
   game_hash.each do |team, info|
     info[:players].each do |player|
       if player[:shoe] > biggest
         biggest = player[:shoe]
-        name = player[:player_name]
+        rebound = player[:rebounds]
       end
     end
   end    
-  biggest
+  rebound
 end 
 
 # Write code here
